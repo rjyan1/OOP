@@ -7,3 +7,4 @@ Created on Wed Aug 17 16:20:52 2022
 
 print("new file")
 print("pulling again")
+print("pushing again part 2")
