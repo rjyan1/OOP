@@ -54,6 +54,8 @@ for instance in Item.all: #Prints all names of items in All List
 # __repr__ (Represents all objects)
 print(Item.all)
 
+# Stopping Point 50:38 OOP with Python - Full Course for Beginners (YouTube)
+print("Stopping Point 50:38 OOP with Python - Full Course for Beginners (YouTube)")
 
 
 
