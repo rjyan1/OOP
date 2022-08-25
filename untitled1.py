@@ -24,7 +24,7 @@ class Item:
     def apply_discount(self): #Applying Discount Method
         self.price = self.price * self.pay_rate
     
-    def __repr__(self): #Represent Object Method/Constructor
+    def __repr__(self): #Represent Object Method/Constructor (Magic Method)
         return f"Item({self.name}, {self.price}, {self.quantity})"
 
 # Instance Attributes
@@ -54,8 +54,8 @@ for instance in Item.all: #Prints all names of items in All List
 # __repr__ (Represents all objects)
 print(Item.all)
 
-# Stopping Point 50:38 OOP with Python - Full Course for Beginners (YouTube)
-print("Stopping Point 50:38 OOP with Python - Full Course for Beginners (YouTube)")
+
+# Class vs Static Methods
 
 
 
