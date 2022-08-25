@@ -9,11 +9,11 @@ class Item:
         assert quantity >= 0, f"Quantity {quantity} is not greater than or equal to zero!"
         
         # Assign to self object
-        print(f"An instance created: {name}")
         self.name = name
         self.price = price
         self.quantity = quantity
         self.calculate = quantity * price
+        print(f"An instance created: {name}")
         print("The total price for", self.name, "is:", self.calculate)
         
         # Actions to execute
@@ -27,6 +27,19 @@ class Item:
     
     def __repr__(self): #Represent Object Method/Constructor (Magic Method)
         return f"Item({self.name}, {self.price}, {self.quantity})"
+    
+    @classmethod # Decorator to instantiate class method
+    def instantiate_from_csv(cls): #Instantiating Class Method
+        with open('Data.csv', 'r') as f:
+            reader = csv.DictReader(f)
+            items = list(reader)
+        
+        for item in items:
+            Item(
+                name = item.get('name'),
+                price = float(item.get('price')),
+                quantity = int(item.get('quantity')),
+                )
 
 # Instance Attributes
 item1 = Item("Phone", 100, 5)
@@ -56,7 +69,9 @@ for instance in Item.all: #Prints all names of items in All List
 print(Item.all)
 
 
-# Class vs Static Methods
+# Print class method items
+Item.instantiate_from_csv()
+print(Item.all)
 
 
 
