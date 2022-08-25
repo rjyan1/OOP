@@ -40,6 +40,20 @@ class Item:
                 quantity = int(item.get('quantity')),
                 )
         print(Item.all)
+    
+    @staticmethod
+    def is_integer(num):
+        # We will count out the floats that are point zero
+        # For i.e: 5.0, 10.0
+        if isinstance(num, float):
+            # Count out the floats that are point zero
+            return num.is_integer()
+        elif isinstance(num, int):
+            return True
+        else:
+            return False
+        
+        
         
 
 # Instance Attributes
@@ -71,10 +85,13 @@ class Item:
 
 
 # Print class method items
-Item.instantiate_from_csv()
+# Item.instantiate_from_csv()
 
-df = pd.read_csv(r'C:/Code/OOP\Data.csv')
-print(df)
+# df = pd.read_csv(r'C:/Code/OOP\Data.csv')
+# print(df)
+
+print(Item.is_integer(83.0))
+
 
 
 
