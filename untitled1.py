@@ -1,4 +1,5 @@
 # Online Store OOP Practice
+import csv
 class Item:
     pay_rate = .70 # Pay rate after 30% Discount'
     all = []
