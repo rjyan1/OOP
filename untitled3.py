@@ -74,8 +74,3 @@ phone1.broken_phones = 1
 phone2 = Phone("version2", 700 ,5)
 phone2.broken_phones = 2
 
-
-def printSuccess():
-    print("I am done")
-    
-printSuccess()
